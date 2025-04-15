@@ -50,8 +50,8 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(yarıçap) {
+  return 2*pi*yarıçap;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -64,9 +64,11 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yarıçap=5,pi) {
+  return pi * Math.pow(yaricap,2)
 }
+yarıçap=15;
+console.log(CemberinAlani);
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -99,27 +101,53 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+let enKucuk = sayilar[0];
+for (let i = 0; i < sayilar.length; i++) {
+  if (sayilar[i] < enKucuk) {
+    enKucuk = sayilar[i];
+  } return enKucuk
+}
 
+let enBuyuk = sayilar[0];
+for (let i = 0; i < sayilar.length; i++) {
+  if (sayilar[i] > enBuyuk) {
+    enBuyuk = sayilar[i];
+  } return enBuyuk
+}
 // 3b çözümü:
 
-/* kodlar buraya */
+let uceTamBolunenler= sayilar [0];
+for( let i=0; i<sayilar.length; i++) {
+  if(sayilar[i]%3) {
+    uceTamBolunenler= sayilar [i]
+  }return uceTamBolunenler
+}
 
 // 3c çözümü:
-
-/* kodlar buraya */
+let uceTamBolunenlerToplami= uceTamBolunenler.reduce ((toplam,yeni)=>toplam+yeni,0)
+console.log (uceTamBolunenlerToplami);
 
 // 3d çözümü
 
-/* kodlar buraya */
+let besYuzdenKucukSayilar = [sayilar.filter((sayilar)=>sayi<500)];
 
 // 3e çözümü
 
-/* kodlar buraya */
+const siraliSayilar= [...besYuzdenKucukSayilar];
+siraliSayilar.sort ((a,b)=>a-b);
 
 // 3f çözümü
 
-/* kodlar buraya */
+function tekrarEdenSayilar (sayi) {
+let tekrarEdenler= "";
+for(i=0; i<sayilar.length; i++) {
+  for( let j=i+1 ;j< sayilar.length; j++){
+
+  if (sayi.charAt(i)===sayi.charAt(j)&&!tekrarEdenler.includes(sayi.charAt(i)))
+
+  }tekrarEdenler+=sayi.charAt(i);
+} 
+} console.log (tekrarEdenSayilar("$`tekrarEdenler` sayısı $`i` kere tekrar edilmiştir"))
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
